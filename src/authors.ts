@@ -10,6 +10,12 @@ export interface Author {
 }
 
 const authors: Record<string, Author> = {
+  'jessica-martinez': {
+    name: 'Jessica Martinez',
+    title: 'Legal Services Editor',
+    image: '/images/Authors images of the review articles/jessica-martinez.jpg',
+    bio: 'Former paralegal turned consumer advocate with expertise in online legal services. Jessica has helped thousands of individuals and small businesses find affordable legal solutions without overspending on traditional law firms.'
+  },
   'rachel-adams': {
     name: 'Rachel Adams',
     title: 'Legal Services Editor',
@@ -31,13 +37,13 @@ const authors: Record<string, Author> = {
 };
 
 const categoryAuthors: Record<string, string[]> = {
-  'legal services': ['rachel-adams', 'david-martinez', 'sarah-thompson'],
-  'online legal': ['rachel-adams', 'david-martinez'],
+  'legal services': ['jessica-martinez', 'david-martinez', 'sarah-thompson'],
+  'online legal': ['jessica-martinez', 'david-martinez'],
   'business law': ['sarah-thompson', 'david-martinez'],
   'estate planning': ['david-martinez', 'rachel-adams'],
-  'family law': ['rachel-adams', 'sarah-thompson'],
+  'family law': ['jessica-martinez', 'sarah-thompson'],
   'legal tech': ['david-martinez', 'sarah-thompson'],
-  'default': ['rachel-adams', 'david-martinez']
+  'default': ['jessica-martinez', 'david-martinez']
 };
 
 export function getAuthorByCategory(
@@ -56,7 +62,7 @@ export function getAuthorByCategory(
   ) {
     const legalAuthors = categoryAuthors['legal services'];
     const authorKey = legalAuthors[0];
-    return authors[authorKey] || authors['rachel-adams'];
+    return authors[authorKey] || authors['jessica-martinez'];
   }
 
   if (
@@ -70,15 +76,15 @@ export function getAuthorByCategory(
 
   for (const [key, authorKeys] of Object.entries(categoryAuthors)) {
     if (normalizedCategory.includes(key)) {
-      return authors[authorKeys[0]] || authors['rachel-adams'];
+      return authors[authorKeys[0]] || authors['jessica-martinez'];
     }
   }
 
-  return authors['rachel-adams'];
+  return authors['jessica-martinez'];
 }
 
 export function getAuthorByKey(authorKey: string): Author {
-  return authors[authorKey] || authors['rachel-adams'];
+  return authors[authorKey] || authors['jessica-martinez'];
 }
 
 export function getAllAuthors(): Record<string, Author> {
