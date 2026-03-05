@@ -1,4 +1,7 @@
 node_modules/
 .astro/
 dist/
+.vercel/
 .DS_Store
+Lifeplanify/
+LawyersPlanify/
