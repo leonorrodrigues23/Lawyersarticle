@@ -1,10 +1,10 @@
-# Robots.txt for LawyersPlanify.com
+# Robots.txt for LawyerPlanify.com
 # Last updated: March 2026
 
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lawyersplanify.com/sitemap.xml
+Sitemap: https://www.lawyerplanify.com/sitemap.xml
 
 Crawl-delay: 1
 
